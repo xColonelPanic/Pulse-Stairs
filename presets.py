@@ -58,7 +58,7 @@ def spring_pulse(r, g, b):
 		helpers.set_stair_rgb(17-(i+1), r, g, b)
 
 def treadmill(r, g, b):
-	for i in range(-1,19):
+	for i in range(-1,18):
 		if i > 2:
 			helpers.set_stair_rgb(i-2,0,0,0)
 		helpers.set_stair_rgb(i-1, r, g, b)
