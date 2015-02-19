@@ -8,4 +8,7 @@ import presets
 
 # presets.calibrate_all()
 
-presets.spring_pulse(0, 25, 255)
+# presets.spring_pulse(0, 25, 255)
+
+while True:
+	presets.treadmill(0, 255, 25)
