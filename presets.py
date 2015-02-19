@@ -66,6 +66,7 @@ def treadmill(r, g, b, size):
 			# helpers.set_stair_rgb(i-11,0,0,0)
 			for x in range(0, size):
 				helpers.set_stair_rgb(i-x, r, g, b)
+			time.sleep(.05)
 
 			# helpers.set_stair_rgb(i-5, r, g, b)	
 			# helpers.set_stair_rgb(i-4, r, g, b)	

@@ -13,3 +13,4 @@ import presets
 while True:
 	presets.treadmill(0, 65, 225, 5)
 	presets.treadmill(255, 35, 0, 5)
+	time.sleep(1)
