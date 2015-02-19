@@ -34,14 +34,13 @@ def transition_rgb(stair_range, rgb1, rgb2, duration):
 		helpers.set_stair_rgb(stair, rgb1[0], rgb1[1], rgb1[2])
 	for i in xrange(duration):
 		for stair in stair_range:
-			chips[stairs[stair]['r'][0]].setPWM( stairs[stair]['r'][1], 0, rgbpwm1[0] + rgbratio[0]*i)
+			helpers.chips[helpers.stairs[stair]['r'][0]].setPWM( helpers.stairs[stair]['r'][1], 0, rgbpwm1[0] + rgbratio[0]*i)
 
-			chips[stairs[stair]['g'][0]].setPWM( stairs[stair]['g'][1], 0, rgbpwm1[1] + rgbratio[1]*i)
+			helpers.chips[helpers.stairs[stair]['g'][0]].setPWM( helpers.stairs[stair]['g'][1], 0, rgbpwm1[1] + rgbratio[1]*i)
 			
-			chips[stairs[stair]['b'][0]].setPWM( stairs[stair]['b'][1], 0, rgbpwm1[2] + rgbratio[2]*i)
+			helpers.chips[helpers.stairs[stair]['b'][0]].setPWM( helpers.stairs[stair]['b'][1], 0, rgbpwm1[2] + rgbratio[2]*i)
 	for stair in stair_range:
 		helpers.set_stair_rgb(stair, rgb2[0], rgb2[1], rgb2[2])
-		
 
 def calibrate(x):
 		helpers.set_stair_rgb(x,255,0,0)
