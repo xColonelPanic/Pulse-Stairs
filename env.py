@@ -11,5 +11,5 @@ import presets
 # presets.spring_pulse(0, 25, 255)
 
 while True:
-	presets.treadmill(0, 65, 225)
-	presets.treadmill(255, 35, 0)
+	presets.treadmill(0, 65, 225, 10)
+	presets.treadmill(255, 35, 0, 10)

@@ -57,19 +57,22 @@ def spring_pulse(r, g, b):
 		helpers.set_stair_rgb(17-i, r, g, b)
 		helpers.set_stair_rgb(17-(i+1), r, g, b)
 
-def treadmill(r, g, b):
+def treadmill(r, g, b, size):
 	for i in range(0,23):
-		if i > 2:
-			helpers.set_stair_rgb(i-6,0,0,0)
+		if i > size-1:
+			helpers.set_stair_rgb(i-size,0,0,0)
 			# helpers.set_stair_rgb(i-3,0,0,0)
 			# helpers.set_stair_rgb(i-10,0,0,0)
 			# helpers.set_stair_rgb(i-11,0,0,0)
-		helpers.set_stair_rgb(i-5, r, g, b)	
-		helpers.set_stair_rgb(i-4, r, g, b)	
-		helpers.set_stair_rgb(i-3, r, g, b)	
-		helpers.set_stair_rgb(i-2, r, g, b)	
-		helpers.set_stair_rgb(i-1, r, g, b)
-		helpers.set_stair_rgb(i, r, g, b)
+			for x in range(0, size):
+				helpers.set_stair_rgb(i-x, r, g, b)
+
+			# helpers.set_stair_rgb(i-5, r, g, b)	
+			# helpers.set_stair_rgb(i-4, r, g, b)	
+			# helpers.set_stair_rgb(i-3, r, g, b)	
+			# helpers.set_stair_rgb(i-2, r, g, b)	
+			# helpers.set_stair_rgb(i-1, r, g, b)
+			# helpers.set_stair_rgb(i, r, g, b)
 
 def calibrate(x):
 		helpers.set_stair_rgb(x,255,0,0)
