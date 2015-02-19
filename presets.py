@@ -64,7 +64,7 @@ def treadmill(r, g, b):
 		helpers.set_stair_rgb(i-1, r, g, b)
 		helpers.set_stair_rgb(i, r, g, b)
 		helpers.set_stair_rgb(i+1, r, g, b)
-		time.sleep(0.5)
+		time.sleep(0.05)
 
 def calibrate(x):
 		helpers.set_stair_rgb(x,255,0,0)
