@@ -1,4 +1,5 @@
 import presets
+import time
 
 # presets.all_white()
 # presets.danceparty()
@@ -12,5 +13,6 @@ import presets
 
 while True:
 	presets.treadmill(0, 65, 225, 5)
+	time.sleep(1)
 	presets.treadmill(255, 35, 0, 5)
 	time.sleep(1)
