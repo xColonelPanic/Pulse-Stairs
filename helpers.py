@@ -5,7 +5,7 @@ import time
 import stairvalues
 import random
 import colorsys
-
+import datetime
 # pwm = PWM(0x40)
 
 chips = [PWM(0x40), PWM(0x41), PWM(0x42)]
@@ -52,3 +52,21 @@ def set_stair_rgb(stair, r, g, b, alpha=255):
 def set_stair_hsv(stair, h, s, v):
 	rgb = colorsys.hsv_to_rgb(h,s,v)
 	set_stair_rgb(stair, rgb[0], rgb[1].rgb[2])
+
+
+###### Timer helper functions #####
+def unix_time(dt):
+    epoch = datetime.datetime.utcfromtimestamp(0)
+    delta = dt - epoch
+    return delta.total_seconds()
+
+def unix_time_millis(dt):
+    return unix_time(dt) * 1000.0
+
+start_time = unix_time_millis(datetime.datetime.now())
+
+def timestamp():
+     global start_time
+     dif = unix_time_millis(datetime.datetime.now()) - start_time
+     return dif/1000.0
+

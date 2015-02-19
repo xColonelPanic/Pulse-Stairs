@@ -4,28 +4,20 @@ import sys
 
 import datetime
 
-def unix_time(dt):
-    epoch = datetime.datetime.utcfromtimestamp(0)
-    delta = dt - epoch
-    return delta.total_seconds()
 
-def unix_time_millis(dt):
-    return unix_time(dt) * 1000.0
+a = (0,65,225)
+b = (255,35,0)
+c = (0, 255, 25)
 
-start_time = unix_time_millis(datetime.datetime.now())
-
-def time():
-     dif = unix_time_millis(datetime.datetime.now()) - start_time
-     return dif/1000.0
 
 def get_color1():
-     return (0,65,225)
+     return c
 
 def get_color2():
-     return (255,35,0)
+     return b
 
 def get_stair_value(stair):
-     sin_value = .5+.5*math.sin(.5*stair -2*time())
+     sin_value = .5+.5*math.sin(.5*stair -2*stairs.timestamp())
      rat = sin_value
      r1, g1, b1 = get_color1()
      r2, g2, b2 = get_color2()
@@ -36,13 +28,13 @@ def get_stair_value(stair):
 
 def sin_pulse():
      global start_time
-     start_time = unix_time_millis(datetime.datetime.now())
-     while time() < 4 * math.pi: 
+     start_time = stairs.timestamp()
+     while stairs.timestamp()-start_time < 4 * math.pi: 
          for i in range(1,17):
              r,g,b = get_stair_value(i)
              stairs.set_stair_rgb(i, r, g, b)
      
 
 if __name__ == "__main__":
-   while True:
-       sin_pulse()
+     while True:
+          sin_pulse()
