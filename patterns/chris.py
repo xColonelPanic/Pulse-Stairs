@@ -25,7 +25,7 @@ def get_color2():
      return (255,35,0)
 
 def get_stair_value(stair):
-     sin_value = .5+.5*math.sin(.5*stair - 1*time())
+     sin_value = .5+.5*math.sin(.5*stair -2*time())
      rat = sin_value
      r1, g1, b1 = get_color1()
      r2, g2, b2 = get_color2()
