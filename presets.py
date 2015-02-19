@@ -45,10 +45,14 @@ def transition_rgb(stair_range, rgb1, rgb2, duration):
 
 def spring_pulse(r, g, b):
 	for i in range(2,16):
+		if i > 2:
+			helpers.set_stair_rgb(i-2,0,0,0)
 		helpers.set_stair_rgb(i-1, r, g, b)
 		helpers.set_stair_rgb(i, r, g, b)
 		helpers.set_stair_rgb(i+1, r, g, b)
 	for i in range(2,16):
+		if i > 2:
+			helpers.set_stair_rgb(17-(i-2),0,0,0)
 		helpers.set_stair_rgb(17-(i-1), r, g, b)
 		helpers.set_stair_rgb(17-i, r, g, b)
 		helpers.set_stair_rgb(17-(i+1), r, g, b)
