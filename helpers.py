@@ -36,7 +36,7 @@ def convert_rgb_to_pwm(r, g, b, a=255):
 	return (int(red), int(green), int(blue))
 
 def set_stair_rgb(stair, r, g, b, alpha=255):
-	if stair < 1:
+	if stair < 1 or stair > 16:
 		return
 	rgb = convert_rgb_to_pwm(r,g,b, alpha)
 
