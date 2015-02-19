@@ -58,7 +58,7 @@ def spring_pulse(r, g, b):
 		helpers.set_stair_rgb(17-(i+1), r, g, b)
 
 def treadmill(r, g, b):
-	for i in range(0,22):
+	for i in range(0,23):
 		if i > 2:
 			helpers.set_stair_rgb(i-6,0,0,0)
 			helpers.set_stair_rgb(i-7,0,0,0)
@@ -72,7 +72,7 @@ def treadmill(r, g, b):
 		helpers.set_stair_rgb(i-2, r, g, b)	
 		helpers.set_stair_rgb(i-1, r, g, b)
 		helpers.set_stair_rgb(i, r, g, b)
-		time.sleep(0.025)
+		time.sleep(0.005)
 
 def calibrate(x):
 		helpers.set_stair_rgb(x,255,0,0)
