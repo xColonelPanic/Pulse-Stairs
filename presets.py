@@ -76,25 +76,25 @@ def treadmill(r, g, b, size):
 
 def calibrate(x):
 		helpers.set_stair_rgb(x,255,0,0)
-		time.sleep(.1)
+		time.sleep(.01)
 		helpers.set_stair_rgb(x,0,0,0)
 		helpers.set_stair_rgb(x,0,255,0)
-		time.sleep(.1)
+		time.sleep(.01)
 		helpers.set_stair_rgb(x,0,0,0)
 		helpers.set_stair_rgb(x,0,0,255)
-		time.sleep(.1)
+		time.sleep(.01)
 		helpers.set_stair_rgb(x,0,0,0)
 		helpers.set_stair_rgb(x,255,255,255)
 
 def calibrate2(x):
 		helpers.set_stair_rgb(x,255,0,0)
-		time.sleep(.1)
+		time.sleep(.01)
 		helpers.set_stair_rgb(x,0,0,0)
 		helpers.set_stair_rgb(x,0,255,0)
-		time.sleep(.1)
+		time.sleep(.01)
 		helpers.set_stair_rgb(x,0,0,0)
 		helpers.set_stair_rgb(x,0,0,255)
-		time.sleep(.1)
+		time.sleep(.01)
 		helpers.set_stair_rgb(x,0,0,0)
 
 def calibrate_all():
