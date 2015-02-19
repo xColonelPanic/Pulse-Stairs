@@ -1,13 +1,5 @@
 #!/usr/bin/python
 
-# rgbpwm = [
-# 	(0,1,2), # step 0
-# 	(3,4,5), # step 1
-# 	(6,7,8), # step 2
-# 	(9,10,11), # step 3
-# 	(12,13,14) # step 4
-# ]
-
 # 0x40:
 # 1		0,1,2
 # 2		3,4,5
@@ -40,7 +32,7 @@ stairs = {
 	7:{'g': (1, 4), 'b': (1, 2), 'r': (1, 3)},
 	8:{'r': (1, 7), 'b': (1, 5), 'g': (1, 6)},
 	9:{'g': (1, 10), 'b': (1, 8), 'r': (1, 9)}, # pwm bug, fix it
-	10:{'r': (1, 13), 'b': (1, 11), 'g': (1, 12)}, # blue channel turns on with 2's blue channel
+	10:{'r': (1, 13), 'b': (1, 11), 'g': (1, 12)},
 	11:{'g': (2, 0), 'b': (1, 14), 'r': (1, 15)},
 	12:{'g': (2, 3), 'b': (2, 1), 'r': (2, 2)},
 	13:{'g': (2, 5), 'b': (2, 4), 'r': (2, 6)},
@@ -48,33 +40,3 @@ stairs = {
 	15:{'r': (2, 12), 'b': (2, 10), 'g': (2, 11)},
 	16:{'g': (2, 15), 'b': (2, 14), 'r': (2, 13)}
 }
-
-
-
-
-
-
-
-
-# cur_chip = 0
-# cur_channel = 0
-# for s in range(1,17):
-	
-# 	r_pair = (cur_chip, cur_channel)
-# 	cur_channel+=1
-# 	cur_channel%=16
-# 	cur_chip = cur_chip+1 if cur_channel == 0 else cur_chip
-	
-# 	g_pair = (cur_chip, cur_channel)
-# 	cur_channel+=1
-# 	cur_channel%=16
-# 	cur_chip = cur_chip+1 if cur_channel == 0 else cur_chip
-	
-# 	b_pair = (cur_chip, cur_channel)
-# 	cur_channel+=1
-# 	cur_channel%=16
-# 	cur_chip = cur_chip+1 if cur_channel == 0 else cur_chip
-# 	stairs[s] = {'r': r_pair, 'g': g_pair, 'b': b_pair}
-
-
-# print stairs
