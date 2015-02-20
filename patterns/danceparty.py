@@ -1,3 +1,6 @@
+# Chris Shroba
+# Dance Party
+
 import stairs
 import random
 

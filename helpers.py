@@ -51,7 +51,7 @@ def set_stair_rgb(stair, r, g, b, alpha=255):
 
 def set_stair_hsv(stair, h, s, v):
 	rgb = colorsys.hsv_to_rgb(h,s,v)
-	set_stair_rgb(stair, rgb[0], rgb[1].rgb[2])
+	set_stair_rgb(stair, rgb[0], rgb[1], rgb[2])
 
 
 ###### Timer helper functions #####

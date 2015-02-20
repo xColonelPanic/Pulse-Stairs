@@ -1,6 +1,10 @@
+# All
+# Pattern Cycle
+
+
 import stairs
 import time
-import chris  # move this to presets
+import sinewave_green_orange  # move this to presets
 
 # stairs.all_white()
 # stairs.danceparty()
@@ -27,7 +31,7 @@ while True:
     time.sleep(1)
 
     for i in range(0, num_iterations):
- 	chris.sin_pulse()
+ 	sinewave_green_orange.sin_pulse()
 
     for i in range(0, num_iterations):
         stairs.treadmill(0, 65, 225, 5)

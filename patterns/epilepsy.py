@@ -1,3 +1,6 @@
+# Chris Shroba
+# Flash All
+
 import stairs
 import random
 
